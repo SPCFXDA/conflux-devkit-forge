@@ -51,7 +51,7 @@ USER $USERNAME
 WORKDIR /workspaces/
 
 # Expose ports required for Conflux node operations and related services
-EXPOSE 3000 12535 12537 8545 8546
+EXPOSE 12535 12537 8545 8546
 
 # Set environment variables for locale settings and editor configurations
 ENV LANG=C.UTF-8 \
@@ -80,6 +80,4 @@ RUN npm install --global hardhat-shorthand \
     && echo "\n\n" | hardhat-completion install
 
 FROM devkit AS devkit-forge
-RUN curl -L https://foundry.paradigm.xyz | bash
-
-
+RUN curl -L https://foundry.paradigm.xyz | bash && bash ~/.foundry/bin/foundryup

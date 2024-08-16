@@ -21,7 +21,6 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		3000,
 		12535,
 		12537,
 		8545,
@@ -36,7 +35,7 @@
 	// }
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "cat /etc/os-release",
+	// "postCreateCommand": "cfoundryup"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
