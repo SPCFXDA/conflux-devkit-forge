@@ -64,13 +64,16 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
-
+devkit start
 
 cast wallet import ONE --mnemonic "test test test test test test test test test test test junk" --mnemonic-derivation-path "m/44'/60'/0'/0/0"
 
 cast w address --account ONE
-0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 
-cast balance  <address>
+result: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+devkit faucet 1000 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+
+cast balance  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 
 forge script script/Counter.s.sol:CounterScript --rpc-url http://localhost:8545 --broadcast --account ONE --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
